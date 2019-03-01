@@ -1,4 +1,4 @@
-
+#include "main.h"
 
     /**
     * This happens before the engine has been initialized
@@ -6,7 +6,7 @@
     * whatever instance variables you have.
     * You can also do this in the Setup method.
     */
-MyApp(Context * context) : Application(context),framecount_(0),time_(0)
+UrhoViewer::UrhoViewer(Context * context) : Application(context),framecount_(0),time_(0)
 {
 }
 
@@ -16,7 +16,7 @@ MyApp(Context * context) : Application(context),framecount_(0),time_(0)
 * of engine importance happens (such as windows, search paths,
 * resolution and other things that might be user configurable).
 */
-virtual void Setup()
+void UrhoViewer::Setup()
 {
     // These parameters should be self-explanatory.
     // See http://urho3d.github.io/documentation/1.5/_main_loop.html
@@ -33,14 +33,12 @@ virtual void Setup()
 * models, controls and what not. Basically, anything that needs
 * the engine initialized and ready goes in here.
 */
-virtual void Start()
+void UrhoViewer::Start()
 {
     // We will be needing to load resources.
     // All the resources used in this example comes with Urho3D.
     // If the engine can't find them, check the ResourcePrefixPath (see http://urho3d.github.io/documentation/1.5/_main_loop.html).
     ResourceCache* cache=GetSubsystem<ResourceCache>();
-
-    bust::DynamicCharacter::RegisterObject(context_);
 
     // Let's use the default style that comes with Urho3D.
     GetSubsystem<UI>()->GetRoot()->SetDefaultStyle(cache->GetResource<XMLFile>("UI/DefaultStyle.xml"));
@@ -57,15 +55,15 @@ virtual void Start()
     text_->SetVerticalAlignment(VA_TOP);
     GetSubsystem<UI>()->GetRoot()->AddChild(text_);
     // Add a button, just as an interactive UI sample.
-    Button* button=new Button(context_);
-    // Note, must be part of the UI system before SetSize calls!
-    GetSubsystem<UI>()->GetRoot()->AddChild(button);
-    button->SetName("Button Quit");
-    button->SetStyle("Button");
-    button->SetSize(32,32);
-    button->SetPosition(16,116);
-    // Subscribe to button release (following a 'press') events
-    SubscribeToEvent(button,E_RELEASED,URHO3D_HANDLER(MyApp,HandleClosePressed));
+    /* Button* button=new Button(context_); */
+    /* // Note, must be part of the UI system before SetSize calls! */
+    /* GetSubsystem<UI>()->GetRoot()->AddChild(button); */
+    /* button->SetName("Button Quit"); */
+    /* button->SetStyle("Button"); */
+    /* button->SetSize(32,32); */
+    /* button->SetPosition(16,116); */
+    /* // Subscribe to button release (following a 'press') events */
+    /* SubscribeToEvent(button,E_RELEASED,URHO3D_HANDLER(UrhoViewer,HandleClosePressed)); */
 
     // Let's setup a scene to render.
     scene_=new Scene(context_);
@@ -95,8 +93,6 @@ virtual void Start()
     boxNode_->SetPosition(Vector3(0,0,0));
     boxNode_->SetScale(Vector3(3,3,3));
 
-    boxNode_->CreateComponent<bust::DynamicCharacter>();
-
     // We need a camera from which the viewport can render.
     cameraNode_=scene_->CreateChild("Camera");
     Camera* camera=cameraNode_->CreateComponent<Camera>();
@@ -115,13 +111,13 @@ virtual void Start()
     // These are sort of subscribed in the order in which the engine
     // would send the events. Read each handler method's comment for
     // details.
-    SubscribeToEvent(E_BEGINFRAME,URHO3D_HANDLER(MyApp,HandleBeginFrame));
-    SubscribeToEvent(E_KEYDOWN,URHO3D_HANDLER(MyApp,HandleKeyDown));
-    SubscribeToEvent(E_UPDATE,URHO3D_HANDLER(MyApp,HandleUpdate));
-    SubscribeToEvent(E_POSTUPDATE,URHO3D_HANDLER(MyApp,HandlePostUpdate));
-    SubscribeToEvent(E_RENDERUPDATE,URHO3D_HANDLER(MyApp,HandleRenderUpdate));
-    SubscribeToEvent(E_POSTRENDERUPDATE,URHO3D_HANDLER(MyApp,HandlePostRenderUpdate));
-    SubscribeToEvent(E_ENDFRAME,URHO3D_HANDLER(MyApp,HandleEndFrame));
+    SubscribeToEvent(E_BEGINFRAME,URHO3D_HANDLER(UrhoViewer,HandleBeginFrame));
+    SubscribeToEvent(E_KEYDOWN,URHO3D_HANDLER(UrhoViewer,HandleKeyDown));
+    SubscribeToEvent(E_UPDATE,URHO3D_HANDLER(UrhoViewer,HandleUpdate));
+//    SubscribeToEvent(E_POSTUPDATE,URHO3D_HANDLER(UrhoViewer,HandlePostUpdate));
+//    SubscribeToEvent(E_RENDERUPDATE,URHO3D_HANDLER(UrhoViewer,HandleRenderUpdate));
+//    SubscribeToEvent(E_POSTRENDERUPDATE,URHO3D_HANDLER(UrhoViewer,HandlePostRenderUpdate));
+//    SubscribeToEvent(E_ENDFRAME,URHO3D_HANDLER(UrhoViewer,HandleEndFrame));
 }
 
 /*
@@ -130,14 +126,14 @@ virtual void Start()
 * but there's no need, this method will get called when the engine stops,
 * for whatever reason (short of a segfault).
 */
-virtual void Stop()
+void UrhoViewer::Stop()
 {
 }
 
 /**
 * Every frame's life must begin somewhere. Here it is.
 */
-void HandleBeginFrame(StringHash eventType,VariantMap& eventData)
+void UrhoViewer::HandleBeginFrame(StringHash eventType,VariantMap& eventData)
 {
     // We really don't have anything useful to do here for this example.
     // Probably shouldn't be subscribing to events we don't care about.
@@ -147,7 +143,7 @@ void HandleBeginFrame(StringHash eventType,VariantMap& eventData)
 * Input from keyboard is handled here. I'm assuming that Input, if
 * available, will be handled before E_UPDATE.
 */
-void HandleKeyDown(StringHash eventType,VariantMap& eventData)
+void UrhoViewer::HandleKeyDown(StringHash eventType,VariantMap& eventData)
 {
     using namespace KeyDown;
     int key=eventData[P_KEY].GetInt();
@@ -163,7 +159,7 @@ void HandleKeyDown(StringHash eventType,VariantMap& eventData)
 /**
 * You can get these events from when ever the user interacts with the UI.
 */
-void HandleClosePressed(StringHash eventType,VariantMap& eventData)
+void UrhoViewer::HandleClosePressed(StringHash eventType,VariantMap& eventData)
 {
     engine_->Exit();
 }
@@ -172,7 +168,7 @@ void HandleClosePressed(StringHash eventType,VariantMap& eventData)
 * Your non-rendering logic should be handled here.
 * This could be moving objects, checking collisions and reaction, etc.
 */
-void HandleUpdate(StringHash eventType,VariantMap& eventData)
+void UrhoViewer::HandleUpdate(StringHash eventType,VariantMap& eventData)
 {
     float timeStep=eventData[Update::P_TIMESTEP].GetFloat();
     framecount_++;
@@ -181,9 +177,6 @@ void HandleUpdate(StringHash eventType,VariantMap& eventData)
     float MOVE_SPEED=10.0f;
     // Mouse sensitivity as degrees per pixel
     const float MOUSE_SENSITIVITY=0.1f;
-
-    if (state)
-        state->AddTime(timeStep);
 
     if(time_ >=1)
     {
@@ -268,11 +261,11 @@ void HandlePostUpdate(StringHash eventType,VariantMap& eventData)
 * See http://urho3d.github.io/documentation/1.32/_rendering.html
 * for details on how the rendering pipeline is setup.
 */
-void HandleRenderUpdate(StringHash eventType, VariantMap & eventData)
-{
+/* void UrhoViewer::HandleRenderUpdate(StringHash eventType, VariantMap & eventData) */
+/* { */
     // We really don't have anything useful to do here for this example.
     // Probably shouldn't be subscribing to events we don't care about.
-}
+/* } */
 
 /**
 * After everything is rendered, there might still be things you wish
@@ -280,21 +273,25 @@ void HandleRenderUpdate(StringHash eventType, VariantMap & eventData)
 * only post rendering is allowed. Good for adding things like debug
 * artifacts on screen or brush up lighting, etc.
 */
-void HandlePostRenderUpdate(StringHash eventType, VariantMap & eventData)
-{
-    // We could draw some debuggy looking thing for the octree.
-    // scene_->GetComponent<Octree>()->DrawDebugGeometry(true);
-}
+/* void UrhoViewer::HandlePostRenderUpdate(StringHash eventType, VariantMap & eventData) */
+/* { */
+/*     // We could draw some debuggy looking thing for the octree. */
+/*     // scene_->GetComponent<Octree>()->DrawDebugGeometry(true); */
+/* } */
 
 /**
 * All good things must come to an end.
 */
-void HandleEndFrame(StringHash eventType,VariantMap& eventData)
+/* void UrhoViewer::HandleEndFrame(StringHash eventType,VariantMap& eventData) */
+/* { */
+/*     // We really don't have anything useful to do here for this example. */
+/*     // Probably shouldn't be subscribing to events we don't care about. */
+/* } */
+
+void UrhoViewer::LoadModel (String filepath)
 {
-    // We really don't have anything useful to do here for this example.
-    // Probably shouldn't be subscribing to events we don't care about.
+
 }
-};
 
 /**
 * This macro is expanded to (roughly, depending on OS) this:

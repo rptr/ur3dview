@@ -28,7 +28,6 @@ if (COMMAND cmake_policy)
     endif ()
 endif ()
 
-set( CMAKE_EXPORT_COMPILE_COMMANDS ON )
 
 # Set CMake modules search path
 set (CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake/Modules)

@@ -54,7 +54,10 @@ private:
     SharedPtr<Scene> scene_;
     SharedPtr<Node> boxNode_;
     SharedPtr<Node> cameraNode_;
-    AnimationState *state;
+
+    SharedPtr<AnimatedModel> model_;
+
+    void LoadModel (String filepath);
 
 //    void HandlePostUpdate (StringHash event_type, VariantMap &event_data);
 //    void HandleRenderUpdate (StringHash event_type, VariantMap &event_data);
