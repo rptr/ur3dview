@@ -52,9 +52,9 @@ private:
     float time_;
     SharedPtr<Text> text_;
     SharedPtr<Scene> scene_;
-    SharedPtr<Node> boxNode_;
     SharedPtr<Node> cameraNode_;
 
+    SharedPtr<Node> model_node_;
     SharedPtr<AnimatedModel> model_;
 
     void LoadModel (String filepath);

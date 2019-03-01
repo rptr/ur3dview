@@ -1,3 +1,7 @@
+#include <Urho3D/Core/ProcessUtils.h>
+
+#include <cstdio>
+
 #include "main.h"
 
     /**
@@ -54,16 +58,6 @@ void UrhoViewer::Start()
     text_->SetHorizontalAlignment(HA_CENTER);
     text_->SetVerticalAlignment(VA_TOP);
     GetSubsystem<UI>()->GetRoot()->AddChild(text_);
-    // Add a button, just as an interactive UI sample.
-    /* Button* button=new Button(context_); */
-    /* // Note, must be part of the UI system before SetSize calls! */
-    /* GetSubsystem<UI>()->GetRoot()->AddChild(button); */
-    /* button->SetName("Button Quit"); */
-    /* button->SetStyle("Button"); */
-    /* button->SetSize(32,32); */
-    /* button->SetPosition(16,116); */
-    /* // Subscribe to button release (following a 'press') events */
-    /* SubscribeToEvent(button,E_RELEASED,URHO3D_HANDLER(UrhoViewer,HandleClosePressed)); */
 
     // Let's setup a scene to render.
     scene_=new Scene(context_);
@@ -87,11 +81,6 @@ void UrhoViewer::Start()
     light->SetRange(100.0f);
     light->SetColor(Color(1, 1, 1));
     lightNode->SetPosition(Vector3(2, 2, 2));
-
-    // Let's put a box in there.
-    boxNode_=scene_->CreateChild("Box");
-    boxNode_->SetPosition(Vector3(0,0,0));
-    boxNode_->SetScale(Vector3(3,3,3));
 
     // We need a camera from which the viewport can render.
     cameraNode_=scene_->CreateChild("Camera");
@@ -118,6 +107,13 @@ void UrhoViewer::Start()
 //    SubscribeToEvent(E_RENDERUPDATE,URHO3D_HANDLER(UrhoViewer,HandleRenderUpdate));
 //    SubscribeToEvent(E_POSTRENDERUPDATE,URHO3D_HANDLER(UrhoViewer,HandlePostRenderUpdate));
 //    SubscribeToEvent(E_ENDFRAME,URHO3D_HANDLER(UrhoViewer,HandleEndFrame));
+
+    Vector<String> args = GetArguments();
+
+    if (args.Size() > 0)
+    {
+        LoadModel(args.At(0));
+    }
 }
 
 /*
@@ -215,7 +211,7 @@ void UrhoViewer::HandleUpdate(StringHash eventType,VariantMap& eventData)
     // With LogicComponents it is easy to control things like movement
     // and animation from some IDE, console or just in game.
     // Alas, it is out of the scope for our simple example.
-      boxNode_->Rotate(Quaternion(8*timeStep,16*timeStep,0));
+//      boxNode_->Rotate(Quaternion(8*timeStep,16*timeStep,0));
 
     Input* input=GetSubsystem<Input>();
     if(input->GetKeyDown(KEY_SHIFT))
@@ -290,7 +286,15 @@ void HandlePostUpdate(StringHash eventType,VariantMap& eventData)
 
 void UrhoViewer::LoadModel (String filepath)
 {
+    auto *cache = GetSubsystem<ResourceCache>();
 
+    model_node_ = scene_->CreateChild("model");
+    model_node_->SetPosition(Vector3(0, 0, 0));
+
+    model_ = model_node_->CreateComponent<AnimatedModel>();
+    model_->SetModel(cache->GetResource<Model>(filepath));
+
+    printf("loading model %s...\n", filepath.CString());
 }
 
 /**

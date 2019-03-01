@@ -1,20 +1,19 @@
-[Fri Mar  1 22:13:35 2019] INFO: Opened log file Urho3D.log
-[Fri Mar  1 22:13:35 2019] INFO: Created 3 worker threads
-[Fri Mar  1 22:13:35 2019] INFO: Added resource path /home/rpj/a/projs/urho3d_viewer/bin/Data/
-[Fri Mar  1 22:13:35 2019] INFO: Added resource path /home/rpj/a/projs/urho3d_viewer/bin/CoreData/
-[Fri Mar  1 22:13:35 2019] INFO: Adapter used Intel Open Source Technology Center Mesa DRI Intel(R) Ivybridge Mobile 
-[Fri Mar  1 22:13:35 2019] INFO: Set screen mode 1280x720 windowed monitor 0 resizable
-[Fri Mar  1 22:13:35 2019] INFO: Initialized input
-[Fri Mar  1 22:13:35 2019] INFO: Initialized user interface
-[Fri Mar  1 22:13:35 2019] INFO: Initialized renderer
-[Fri Mar  1 22:13:35 2019] ERROR: Could not initialize audio output
-[Fri Mar  1 22:13:35 2019] INFO: Initialized engine
-[Fri Mar  1 22:13:35 2019] ERROR: Could not find resource Textures/UI.png
-[Fri Mar  1 22:13:35 2019] ERROR: Could not find resource chibi/body.mdl
-[Fri Mar  1 22:13:35 2019] ERROR: Could not find resource chibi/head.mdl
-[Fri Mar  1 22:13:35 2019] ERROR: Could not find resource chibi/eyes_1.mdl
-[Fri Mar  1 22:13:35 2019] ERROR: Could not find resource chibi/face_1.mdl
-[Fri Mar  1 22:13:35 2019] ERROR: Could not find resource chibi/mouth_1.mdl
-[Fri Mar  1 22:13:35 2019] ERROR: Could not find resource chibi/overalls.mdl
-[Fri Mar  1 22:13:35 2019] ERROR: Could not find resource chibi/tshirt.mdl
-[Fri Mar  1 22:13:35 2019] ERROR: Could not find resource chibi/walk.ani
+[Fri Mar  1 23:55:19 2019] INFO: Opened log file Urho3D.log
+[Fri Mar  1 23:55:19 2019] INFO: Created 3 worker threads
+[Fri Mar  1 23:55:19 2019] INFO: Added resource path /home/rpj/a/projs/urho3d_viewer/bin/Data/
+[Fri Mar  1 23:55:19 2019] INFO: Added resource path /home/rpj/a/projs/urho3d_viewer/bin/CoreData/
+[Fri Mar  1 23:55:19 2019] INFO: Adapter used Intel Open Source Technology Center Mesa DRI Intel(R) Ivybridge Mobile 
+[Fri Mar  1 23:55:19 2019] INFO: Set screen mode 1280x720 windowed monitor 0 resizable
+[Fri Mar  1 23:55:19 2019] INFO: Initialized input
+[Fri Mar  1 23:55:19 2019] INFO: Initialized user interface
+[Fri Mar  1 23:55:19 2019] INFO: Initialized renderer
+[Fri Mar  1 23:55:19 2019] ERROR: Could not initialize audio output
+[Fri Mar  1 23:55:19 2019] INFO: Initialized engine
+[Fri Mar  1 23:55:20 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+193 frames in 1.0048 seconds = 192.06 fps
+[Fri Mar  1 23:55:21 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0000 seconds = 199.99 fps
+[Fri Mar  1 23:55:22 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0000 seconds = 199.98 fps
+[Fri Mar  1 23:55:23 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0000 seconds = 199.98 fps
