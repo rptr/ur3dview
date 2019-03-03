@@ -167,6 +167,33 @@ u3dv/fast:
 	$(MAKE) -f CMakeFiles/u3dv.dir/build.make CMakeFiles/u3dv.dir/build
 .PHONY : u3dv/fast
 
+AnimatedCharacter.o: AnimatedCharacter.cpp.o
+
+.PHONY : AnimatedCharacter.o
+
+# target to build an object file
+AnimatedCharacter.cpp.o:
+	$(MAKE) -f CMakeFiles/u3dv.dir/build.make CMakeFiles/u3dv.dir/AnimatedCharacter.cpp.o
+.PHONY : AnimatedCharacter.cpp.o
+
+AnimatedCharacter.i: AnimatedCharacter.cpp.i
+
+.PHONY : AnimatedCharacter.i
+
+# target to preprocess a source file
+AnimatedCharacter.cpp.i:
+	$(MAKE) -f CMakeFiles/u3dv.dir/build.make CMakeFiles/u3dv.dir/AnimatedCharacter.cpp.i
+.PHONY : AnimatedCharacter.cpp.i
+
+AnimatedCharacter.s: AnimatedCharacter.cpp.s
+
+.PHONY : AnimatedCharacter.s
+
+# target to generate assembly for a file
+AnimatedCharacter.cpp.s:
+	$(MAKE) -f CMakeFiles/u3dv.dir/build.make CMakeFiles/u3dv.dir/AnimatedCharacter.cpp.s
+.PHONY : AnimatedCharacter.cpp.s
+
 DynamicCharacter.o: DynamicCharacter.cpp.o
 
 .PHONY : DynamicCharacter.o
@@ -234,6 +261,9 @@ help:
 	@echo "... u3dv"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... AnimatedCharacter.o"
+	@echo "... AnimatedCharacter.i"
+	@echo "... AnimatedCharacter.s"
 	@echo "... DynamicCharacter.o"
 	@echo "... DynamicCharacter.i"
 	@echo "... DynamicCharacter.s"

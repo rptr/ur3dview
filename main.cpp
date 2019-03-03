@@ -1,8 +1,10 @@
 #include <Urho3D/Core/ProcessUtils.h>
 
 #include <cstdio>
+#include <dirent.h>
 
 #include "main.h"
+#include "AnimatedCharacter.h"
 
     /**
     * This happens before the engine has been initialized
@@ -22,6 +24,8 @@ UrhoViewer::UrhoViewer(Context * context) : Application(context),framecount_(0),
 */
 void UrhoViewer::Setup()
 {
+    AnimatedCharacter::RegisterObject(context_);
+
     // These parameters should be self-explanatory.
     // See http://urho3d.github.io/documentation/1.5/_main_loop.html
     // for a more complete list.
@@ -293,15 +297,11 @@ void HandlePostUpdate(StringHash eventType,VariantMap& eventData)
 
 void UrhoViewer::LoadModel (String filepath)
 {
-    auto *cache = GetSubsystem<ResourceCache>();
-
-    model_node_ = scene_->CreateChild("model");
-    model_node_->SetPosition(Vector3(0, 0, 0));
-
-    model_ = model_node_->CreateComponent<AnimatedModel>();
-    model_->SetModel(cache->GetResource<Model>(filepath));
+    auto *c_node = scene_->CreateChild("char");
+    auto *a_char = c_node->CreateComponent<AnimatedCharacter>();
 
     printf("loading model %s...\n", filepath.CString());
+    a_char->SetModel(filepath);
 }
 
 /**

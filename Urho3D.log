@@ -1,13 +1,11 @@
-[Sat Mar  2 11:55:31 2019] INFO: Opened log file Urho3D.log
-[Sat Mar  2 11:55:31 2019] INFO: Created 3 worker threads
-[Sat Mar  2 11:55:31 2019] INFO: Added resource path /home/rpj/a/projs/urho3d_viewer/bin/Data/
-[Sat Mar  2 11:55:31 2019] INFO: Added resource path /home/rpj/a/projs/urho3d_viewer/bin/CoreData/
-[Sat Mar  2 11:55:31 2019] INFO: Adapter used Intel Open Source Technology Center Mesa DRI Intel(R) Ivybridge Mobile 
-[Sat Mar  2 11:55:31 2019] INFO: Set screen mode 1280x720 windowed monitor 0 resizable
-[Sat Mar  2 11:55:31 2019] INFO: Initialized input
-[Sat Mar  2 11:55:31 2019] INFO: Initialized user interface
-[Sat Mar  2 11:55:31 2019] INFO: Initialized renderer
-[Sat Mar  2 11:55:31 2019] ERROR: Could not initialize audio output
-[Sat Mar  2 11:55:31 2019] INFO: Initialized engine
-[Sat Mar  2 11:55:32 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
-196 frames in 1.0038 seconds = 195.24 fps
+[Sun Mar  3 17:57:57 2019] INFO: Opened log file Urho3D.log
+[Sun Mar  3 17:57:57 2019] INFO: Created 3 worker threads
+[Sun Mar  3 17:57:57 2019] INFO: Added resource path /home/rpj/a/projs/urho3d_viewer/bin/Data/
+[Sun Mar  3 17:57:57 2019] INFO: Added resource path /home/rpj/a/projs/urho3d_viewer/bin/CoreData/
+[Sun Mar  3 17:57:57 2019] INFO: Adapter used Intel Open Source Technology Center Mesa DRI Intel(R) Ivybridge Mobile 
+[Sun Mar  3 17:57:57 2019] INFO: Set screen mode 1280x720 windowed monitor 0 resizable
+[Sun Mar  3 17:57:57 2019] INFO: Initialized input
+[Sun Mar  3 17:57:57 2019] INFO: Initialized user interface
+[Sun Mar  3 17:57:57 2019] INFO: Initialized renderer
+[Sun Mar  3 17:57:57 2019] ERROR: Could not initialize audio output
+[Sun Mar  3 17:57:57 2019] INFO: Initialized engine
