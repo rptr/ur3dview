@@ -9,13 +9,17 @@
 #include <Urho3D/Resource/ResourceCache.h>
 #include <Urho3D/Resource/XMLFile.h>
 #include <Urho3D/IO/Log.h>
+
 #include <Urho3D/UI/UI.h>
 #include <Urho3D/UI/Text.h>
 #include <Urho3D/UI/Font.h>
 #include <Urho3D/UI/Button.h>
 #include <Urho3D/UI/UIEvents.h>
+#include <Urho3D/UI/ScrollView.h>
+
 #include <Urho3D/Scene/Scene.h>
 #include <Urho3D/Scene/SceneEvents.h>
+
 #include <Urho3D/Graphics/Graphics.h>
 #include <Urho3D/Graphics/Camera.h>
 #include <Urho3D/Graphics/Geometry.h>
@@ -53,6 +57,8 @@ private:
     SharedPtr<Text> text_;
     SharedPtr<Scene> scene_;
     SharedPtr<Node> cameraNode_;
+
+    ScrollView *anim_holder_;
 
     SharedPtr<Node> model_node_;
     SharedPtr<AnimatedModel> model_;

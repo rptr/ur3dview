@@ -108,6 +108,13 @@ void UrhoViewer::Start()
 //    SubscribeToEvent(E_POSTRENDERUPDATE,URHO3D_HANDLER(UrhoViewer,HandlePostRenderUpdate));
 //    SubscribeToEvent(E_ENDFRAME,URHO3D_HANDLER(UrhoViewer,HandleEndFrame));
 
+    auto* uiStyle = cache->GetResource<XMLFile>("UI/DefaultStyle.xml");
+    auto *root = GetSubsystem<UI>()->GetRoot();
+    root->SetDefaultStyle(uiStyle);
+    anim_holder_ = root->CreateChild<ScrollView>();
+    anim_holder_->SetFixedSize(300, 300);
+    anim_holder_->SetStyleAuto();
+
     Vector<String> args = GetArguments();
 
     if (args.Size() > 0)
