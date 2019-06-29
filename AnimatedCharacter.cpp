@@ -1,12 +1,11 @@
 #include <Urho3D/Resource/ResourceCache.h>
-
 #include <Urho3D/Core/Context.h>
-
 #include <Urho3D/Graphics/Material.h>
 
-#include "AnimatedCharacter.h"
-
 #include "dirent.h"
+#include "cstdio"
+
+#include "AnimatedCharacter.h"
 
 namespace Urho3D 
 {

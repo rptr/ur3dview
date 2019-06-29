@@ -1,11 +1,21 @@
-[Sun Mar  3 17:57:57 2019] INFO: Opened log file Urho3D.log
-[Sun Mar  3 17:57:57 2019] INFO: Created 3 worker threads
-[Sun Mar  3 17:57:57 2019] INFO: Added resource path /home/rpj/a/projs/urho3d_viewer/bin/Data/
-[Sun Mar  3 17:57:57 2019] INFO: Added resource path /home/rpj/a/projs/urho3d_viewer/bin/CoreData/
-[Sun Mar  3 17:57:57 2019] INFO: Adapter used Intel Open Source Technology Center Mesa DRI Intel(R) Ivybridge Mobile 
-[Sun Mar  3 17:57:57 2019] INFO: Set screen mode 1280x720 windowed monitor 0 resizable
-[Sun Mar  3 17:57:57 2019] INFO: Initialized input
-[Sun Mar  3 17:57:57 2019] INFO: Initialized user interface
-[Sun Mar  3 17:57:57 2019] INFO: Initialized renderer
-[Sun Mar  3 17:57:57 2019] ERROR: Could not initialize audio output
-[Sun Mar  3 17:57:57 2019] INFO: Initialized engine
+[Sat Jun 29 03:30:49 2019] INFO: Opened log file Urho3D.log
+[Sat Jun 29 03:30:49 2019] INFO: Created 3 worker threads
+[Sat Jun 29 03:30:49 2019] INFO: Added resource path /home/rpj/a/projs/ur3dview/bin/Data/
+[Sat Jun 29 03:30:49 2019] INFO: Added resource path /home/rpj/a/projs/ur3dview/bin/CoreData/
+[Sat Jun 29 03:30:49 2019] INFO: Adapter used Intel Open Source Technology Center Mesa DRI Intel(R) Ivybridge Mobile 
+[Sat Jun 29 03:30:49 2019] INFO: Set screen mode 1280x720 windowed monitor 0 resizable
+[Sat Jun 29 03:30:49 2019] INFO: Initialized input
+[Sat Jun 29 03:30:49 2019] INFO: Initialized user interface
+[Sat Jun 29 03:30:49 2019] INFO: Initialized renderer
+[Sat Jun 29 03:30:49 2019] ERROR: Could not initialize audio output
+[Sat Jun 29 03:30:49 2019] INFO: Initialized engine
+[Sat Jun 29 03:30:50 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+197 frames in 1.0024 seconds = 196.52 fps
+[Sat Jun 29 03:30:51 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0000 seconds = 199.99 fps
+[Sat Jun 29 03:30:52 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0002 seconds = 199.95 fps
+[Sat Jun 29 03:30:53 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0002 seconds = 199.95 fps
+[Sat Jun 29 03:30:54 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0001 seconds = 199.97 fps
