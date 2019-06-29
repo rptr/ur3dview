@@ -74,6 +74,10 @@ void UrhoViewer::Start()
     if (args.Size() > 0)
     {
         LoadModel(args.At(0));
+    } else
+    {
+        printf("\nUsage: u3dv /path/to/model.mdl\n");
+        exit(1);
     }
 }
 

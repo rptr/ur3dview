@@ -64,9 +64,4 @@ private:
     SharedPtr<AnimatedModel> model_;
 
     void LoadModel (String filepath);
-
-//    void HandlePostUpdate (StringHash event_type, VariantMap &event_data);
-//    void HandleRenderUpdate (StringHash event_type, VariantMap &event_data);
-//    void HandlePostRenderUpdate (StringHash event_type, VariantMap &event_data);
-//    void HandleEndFrame (StringHash event_type, VariantMap &event_data);
 };
