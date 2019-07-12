@@ -58,6 +58,7 @@ private:
     SharedPtr<Scene> scene_;
     SharedPtr<Node> cameraNode_;
 
+    // GUI
     ScrollView *anim_holder_;
 
     SharedPtr<Node> model_node_;

@@ -1,10 +1,32 @@
-[Sat Jun 29 04:24:23 2019] INFO: Opened log file Urho3D.log
-[Sat Jun 29 04:24:23 2019] INFO: Created 3 worker threads
-[Sat Jun 29 04:24:23 2019] INFO: Added resource path /home/rpj/a/projs/ur3dview/bin/Data/
-[Sat Jun 29 04:24:23 2019] INFO: Added resource path /home/rpj/a/projs/ur3dview/bin/CoreData/
-[Sat Jun 29 04:24:23 2019] INFO: Set screen mode 1280x720 windowed monitor 0 resizable
-[Sat Jun 29 04:24:23 2019] INFO: Initialized input
-[Sat Jun 29 04:24:23 2019] INFO: Initialized user interface
-[Sat Jun 29 04:24:23 2019] INFO: Initialized renderer
-[Sat Jun 29 04:24:23 2019] INFO: Set audio mode 44100 Hz stereo interpolated
-[Sat Jun 29 04:24:23 2019] INFO: Initialized engine
+[Sat Jun 29 04:31:36 2019] INFO: Opened log file Urho3D.log
+[Sat Jun 29 04:31:36 2019] INFO: Created 3 worker threads
+[Sat Jun 29 04:31:36 2019] INFO: Added resource path /home/rpj/a/projs/ur3dview/bin/Data/
+[Sat Jun 29 04:31:36 2019] INFO: Added resource path /home/rpj/a/projs/ur3dview/bin/CoreData/
+[Sat Jun 29 04:31:36 2019] INFO: Set screen mode 1280x720 windowed monitor 0 resizable
+[Sat Jun 29 04:31:36 2019] INFO: Initialized input
+[Sat Jun 29 04:31:36 2019] INFO: Initialized user interface
+[Sat Jun 29 04:31:36 2019] INFO: Initialized renderer
+[Sat Jun 29 04:31:36 2019] INFO: Set audio mode 44100 Hz stereo interpolated
+[Sat Jun 29 04:31:36 2019] INFO: Initialized engine
+[Sat Jun 29 04:31:37 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+197 frames in 1.0002 seconds = 196.95 fps
+[Sat Jun 29 04:31:38 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0000 seconds = 199.98 fps
+[Sat Jun 29 04:31:39 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0001 seconds = 199.97 fps
+[Sat Jun 29 04:31:40 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0002 seconds = 199.95 fps
+[Sat Jun 29 04:31:41 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0002 seconds = 199.94 fps
+[Sat Jun 29 04:31:42 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+199 frames in 1.0038 seconds = 198.23 fps
+[Sat Jun 29 04:31:43 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0000 seconds = 199.99 fps
+[Sat Jun 29 04:31:44 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0000 seconds = 199.98 fps
+[Sat Jun 29 04:31:45 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0001 seconds = 199.96 fps
+[Sat Jun 29 04:31:46 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0000 seconds = 199.98 fps
+[Sat Jun 29 04:31:47 2019] INFO: Keys: tab = toggle mouse, AWSD = move camera, Shift = fast mode, Esc = quit.
+200 frames in 1.0000 seconds = 199.99 fps

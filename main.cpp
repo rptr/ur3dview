@@ -62,12 +62,15 @@ void UrhoViewer::Start()
     SubscribeToEvent(E_KEYDOWN,URHO3D_HANDLER(UrhoViewer,HandleKeyDown));
     SubscribeToEvent(E_UPDATE,URHO3D_HANDLER(UrhoViewer,HandleUpdate));
 
+    // GUI
     auto* uiStyle = cache->GetResource<XMLFile>("UI/DefaultStyle.xml");
     auto *root = GetSubsystem<UI>()->GetRoot();
     root->SetDefaultStyle(uiStyle);
     anim_holder_ = root->CreateChild<ScrollView>();
-    anim_holder_->SetFixedSize(300, 300);
+    anim_holder_->SetFixedSize(200, 300);
     anim_holder_->SetStyleAuto();
+
+    auto *
 
     Vector<String> args = GetArguments();
 
